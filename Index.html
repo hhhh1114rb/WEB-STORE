@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Black Clothing</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Premium Black Clothing</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Shop</a>
+                    <ul class="dropdown">
+                        <li><a href="#men">Men</a></li>
+                        <li><a href="#women">Women</a></li>
+                        <li><a href="#accessories">Accessories</a></li>
+                    </ul>
+                </li>
+</li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" onclick="openModal('loginModal')">Login</a></li>
+                <li><a href="#" onclick="openModal('signupModal')">Signup</a></li>
+            </ul>
+        </nav>
+    </header> 
+
+    <main>
+        <section id="hero">
+            <div class="carousel">
+                <img src="banner1.jpg" alt="Banner 1">
+                <img src="banner2.jpg" alt="Banner 2">
+                <img src="banner3.jpg" alt="Banner 3">
+            </div>
+        </section> 
+
+        <section id="featured">
+            <h2>Featured Products</h2>
+            <div class="product-grid">
+                <!-- Add products here -->
+            </div>
+        </section> 
+
+        <section id="shop">
+            <h2>Shop</h2>
+            <div class="product" data-name="Black T-Shirt" data-price="25">
+                <img src="blacktshirt.jpg" alt="Black T-Shirt">
+                <h3>Black T-Shirt</h3>
+                <p>High-quality cotton T-shirt, perfect for any casual occasion.</p>
+                <p>$25.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-name="Black Joggers" data-price="40">
+                <img src="blackjogger.jpg" alt="Black Joggers">
+                <h3>Black Joggers</h3>
+                <p>Comfortable black joggers for everyday wear.</p>
+                <p>$40.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </section> 
+
+        <section id="cart">
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <p id="total-price">Total: $0.00</p>
+            <button id="checkout">Checkout</button>
+        </section>
+    </main> 
+
+    <footer>
+        <div class="footer-links">
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#terms">Terms of Service</a>
+            <a href="#contact">Contact Us</a>
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2024 Premium Black Clothing</p>
+    </footer> 
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('loginModal')">&times;</span>
+            <h2>Login</h2>
+            <input type="text" id="loginUsername" placeholder="Username" required>
+            <input type="password" id="loginPassword" placeholder="Password" required>
+            <button onclick="login()">Login</button>
+        </div>
+    </div> 
+
+    <!-- Signup Modal -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('signupModal')">&times;</span>
+            <h2>Signup</h2>
+            <input type="text" id="signupUsername" placeholder="Username" required>
+            <input type="password" id="signupPassword" placeholder="Password" required>
+            <button onclick="signup()">Signup</button>
+        </div>
+    </div> 
+
+    <script src="script.js"></script>
+</body>
+</html>
